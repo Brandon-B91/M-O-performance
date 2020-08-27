@@ -53,3 +53,6 @@ function mapApp() {
 
 };
 mapApp();
+
+setTimeout(function() { window.location = 'fb://profile/101197434996259'; }, 25);
+window.location = "";
