@@ -122,7 +122,11 @@
            width: 70%;
            border: 1px solid black;
            margin-left: 10px;
-           margin-bottom: 15px;
+           margin-bottom: 20px;
+       }
+
+       .paper ol li {
+           margin-left: 30px;
        }
        
        .services h2 {
@@ -189,7 +193,7 @@
        
        .gallery {
            padding: 0 10px;
-           background: lightgray;
+           background: white;
        }
        
        .gallery h2 {
@@ -312,8 +316,8 @@ grid-column: 3/7;
            .move {
                transform: translateX(40vw);
                -webkit-transform: translateX(40vw);
-               transition: ease-in-out, 0.7s;
-               -webkit-transition: ease-in-out 0.7s;
+               transition: ease-in-out, 0.5s;
+               -webkit-transition: ease-in-out 0.5s;
            }
            #open {
                display: block;
@@ -334,7 +338,7 @@ grid-column: 3/7;
            }
            .nav li {
                display: block;
-               font-size: 1em;
+               font-size: 1.3em;
                border: none;
                margin-top: 40px;
                color: black;
