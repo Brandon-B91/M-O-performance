@@ -24,6 +24,7 @@ function openModal() {
     open.addEventListener('click', () => {
         let navMdl = document.querySelector('nav');
         navMdl.classList.add('move');
+        open.style.display = "none";
 
     });
 
@@ -31,6 +32,9 @@ function openModal() {
     x.addEventListener('click', () => {
         let navMdl = document.querySelector('nav');
         navMdl.classList.remove('move');
+        setInterval(() => {
+            open.style.display = 'block';
+        }, 600);
     });
 };
 openModal();

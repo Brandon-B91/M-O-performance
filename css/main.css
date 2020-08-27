@@ -295,7 +295,7 @@ grid-column: 3/7;
                height: 100%;
                position: fixed;
                top: 0;
-               left: -150px;
+               left: -40vw;
                z-index: 101;
                opacity: 0.9;
                transition: ease-in-out 0.7s;
@@ -310,8 +310,8 @@ grid-column: 3/7;
                flex-direction: column;
            }
            .move {
-               transform: translateX(150px);
-               -webkit-transform: translateX(150px);
+               transform: translateX(40vw);
+               -webkit-transform: translateX(40vw);
                transition: ease-in-out, 0.7s;
                -webkit-transition: ease-in-out 0.7s;
            }
