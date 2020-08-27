@@ -42,7 +42,8 @@ openModal();
 function mapApp() {
     let maps = document.querySelector('.maps');
     maps.addEventListener('click', () => {
-        if /* if we're on iOS, open in Apple Maps */ ((navigator.platform.indexOf("iPhone") != -1) ||
+        /* if we're on iOS, open in Apple Maps */
+        if ((navigator.platform.indexOf("iPhone") != -1) ||
             (navigator.platform.indexOf("iPad") != -1) ||
             (navigator.platform.indexOf("iPod") != -1))
             window.open('maps://maps.google.com/maps/dir/?daddr=206 + Wyoming + Blvd + NE, +Albuquerque, +NM + 87123');
@@ -53,4 +54,15 @@ function mapApp() {
 };
 mapApp();
 
-// 206 + Wyoming + Blvd + NE, +Albuquerque, +NM + 87123
+function openFB() {
+    let fb = document.querySelector('.fb');
+    maps.addEventListener('click', () => {
+        /* if we're on iOS, open in Apple Maps */
+        if ((navigator.platform.indexOf("iPhone") != -1) ||
+            (navigator.platform.indexOf("iPad") != -1) ||
+            (navigator.platform.indexOf("iPod") != -1))
+            window.open('fb://page/?id=101197434996259');
+        else /* else use Google */
+            window.open('fb://page/101197434996259');
+    });
+};
