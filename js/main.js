@@ -47,8 +47,8 @@ function mapApp() {
             (navigator.platform.indexOf("iPod") != -1))
             window.open('maps://maps.google.com/maps/dir/?daddr=206 + Wyoming + Blvd + NE, +Albuquerque, +NM + 87123');
         else /* else use Google */
-            window.open('');
-    })
+            window.open('https://maps.google.com/maps/dir/?daddr=206 + Wyoming + Blvd + NE, +Albuquerque, +NM + 87123');
+    });
 
 };
 mapApp();
