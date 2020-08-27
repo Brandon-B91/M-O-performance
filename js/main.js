@@ -53,16 +53,3 @@ function mapApp() {
 
 };
 mapApp();
-
-function openFB() {
-    let fb = document.querySelector('.fb');
-    maps.addEventListener('click', () => {
-        /* if we're on iOS, open in Apple Maps */
-        if ((navigator.platform.indexOf("iPhone") != -1) ||
-            (navigator.platform.indexOf("iPad") != -1) ||
-            (navigator.platform.indexOf("iPod") != -1))
-            window.open('fb://page/?id=101197434996259');
-        else /* else use Google */
-            window.open('fb://page/101197434996259');
-    });
-};
