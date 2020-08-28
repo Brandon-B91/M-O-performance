@@ -57,8 +57,8 @@ mapApp();
 function openFB() {
     let openFb = document.querySelector('.fb');
     openFb.addEventListener('click', () => {
-        setTimeout(function() { window.location = 'fb://profile/101197434996259'; }, 25);
-        window.location = 'https://www.facebook.com/MOs-Garage-and-Performance-101197434996259/';
+        setTimeout(function() { window.location = 'https://www.facebook.com/MOs-Garage-and-Performance-101197434996259/'; }, 25);
+        window.location = 'fb://profile/101197434996259';
     })
 }
 openFB();
