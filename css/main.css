@@ -178,6 +178,7 @@
        .swiper-slide p {
            margin: 0 30px;
            color: black;
+           font-size: 1em;
        }
        
        .swiper-button-prev {

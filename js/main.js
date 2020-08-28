@@ -26,15 +26,17 @@ function openModal() {
         navMdl.classList.add('move');
         open.style.display = "none";
 
+
     });
 
     let x = document.querySelector('#close');
     x.addEventListener('click', () => {
         let navMdl = document.querySelector('nav');
         navMdl.classList.remove('move');
-        setInterval(() => {
+        setTimeout(() => {
             open.style.display = 'block';
         }, 600);
+        clearInterval();
     });
 };
 openModal();
