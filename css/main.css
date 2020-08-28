@@ -333,8 +333,8 @@ grid-column: 3/7;
            #open {
                display: block;
                position: fixed;
-               top: 75px;
-               left: 15px;
+               top: 50px;
+               left: 10px;
                font-size: 1.3em;
                color: black;
                z-index: 100;
@@ -342,8 +342,8 @@ grid-column: 3/7;
            #close {
                display: block;
                position: absolute;
-               top: 15px;
-               left: 15px;
+               top: 50px;
+               left: 10px;
                font-size: 1.3em;
                color: black;
            }
@@ -406,6 +406,7 @@ grid-column: 3/7;
            }
            .contact-us {
                height: auto;
+               width: 98vw:
            }
            .contact-us ul {
                display: grid;
