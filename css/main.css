@@ -416,6 +416,7 @@ grid-column: 3/7;
            .contact-us h3 {
                display: block;
                margin: 10px 10px;
+               padding: 0 10px:
            }
            .newsLetter {
                display: inline;
