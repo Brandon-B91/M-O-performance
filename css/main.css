@@ -6,6 +6,7 @@
            padding: 0;
            scroll-behavior: smooth;
            font-family: sans-serif;
+           max-width: 1400PX;
        }
        
        a {
@@ -61,21 +62,22 @@
        #open {
            display: none;
        }
+
+       nav {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+       }
        
        .nav {
-           width: 100%;
-           position: sticky;
-           top: 0;
            background: white;
            height: 75px;
            display: flex;
            align-items: center;
-           justify-content: space-between;
-           z-index: 10;
+           justify-content: space-around;
        }
        
        .nav ul {
-           width: 100%;
            text-align: center;
        }
        
@@ -138,13 +140,15 @@
        .services li {
            margin-left: 35px;
        }
-       
+       .swiper-wrapper {
+           height: 30vh;
+           z-index: 1;
+       }
        .swiper-container {
            width: 100%;
            height: 100%;
-           background: white;
-       }
-       
+           
+       } 
        .swiper-slide {
            text-align: center;
            font-size: 18px;
@@ -164,6 +168,7 @@
            align-items: center;
            margin-top: 20px;
            margin-bottom: 25px;
+           z-index: 1;
        }
        
        .swiper-slide h2 {
@@ -308,6 +313,8 @@ grid-column: 3/7;
                padding: 0;
                display: flex;
                flex-direction: column;
+               align-items: center;
+               justify-content: center;
            }
            .move {
                transform: translateX(40vw);
