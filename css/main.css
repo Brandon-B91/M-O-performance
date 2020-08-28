@@ -415,7 +415,7 @@ grid-column: 3/7;
            }
            .contact-us h3 {
                display: block;
-               margin: 10px 0;
+               margin: 10px 10px;
            }
            .newsLetter {
                display: inline;
