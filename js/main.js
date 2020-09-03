@@ -1,13 +1,14 @@
 const modal = document.querySelector('.modal');
 const modalImg = document.querySelector('.modalImg');
 const imgs = document.querySelectorAll('.img');
+let altTxt = document.querySelector('.altTxt');
 
 
 imgs.forEach((img) => {
     img.addEventListener('click', function mdl() {
         modal.style.display = 'block';
         modalImg.src = this.src;
-        // altTxt.textContent = this.alt;
+        altTxt.textContent = this.alt;
     })
 })
 
