@@ -74,6 +74,9 @@ function screenWidth() {
         if (width > 600) {
             contact.classList.add('show-numbers');
         }
+        setInterval(function() {
+            contact.classList.remove('show-numbers')
+        }, 15000);
     })
 }
 screenWidth();
