@@ -92,7 +92,8 @@ h2 {
 }
 
 .overlay label:hover {
-    background: lightgray;
+    cursor: pointer;
+    background: rgba(215, 215, 215);
 }
 
 .numbers {
