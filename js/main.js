@@ -65,3 +65,15 @@ function openFB() {
     })
 }
 openFB();
+
+function screenWidth() {
+    let callUs = document.querySelector('label');
+    let width = window.screen.width;
+    callUs.addEventListener('click', () => {
+        let contact = document.querySelector('.numbers');
+        if (width > 600) {
+            contact.classList.add('show-numbers');
+        }
+    })
+}
+screenWidth();
