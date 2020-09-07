@@ -76,7 +76,7 @@ function screenWidth() {
         }
         setInterval(function() {
             contact.classList.remove('show-numbers')
-        }, 15000);
+        }, 10000);
     })
 }
 screenWidth();
