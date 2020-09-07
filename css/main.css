@@ -6,8 +6,6 @@
     padding: 0;
     scroll-behavior: smooth;
     font-family: sans-serif;
-    max-width: 1400PX;
-    margin: 0 auto;
 }
 
 a {
@@ -21,11 +19,13 @@ a {
     align-items: center;
     justify-self: center;
     max-width: 1400px;
+    margin: 0 auto;
 }
 
 .modal {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -55,6 +55,7 @@ a {
 }
 
 .address {
+    font-size: 1.5em;
     text-align: center;
     padding: 5px;
 }
@@ -65,9 +66,9 @@ a {
 
 .overlay {
     position: absolute;
-    top: 35px;
-    left: 50;
-    height: 60vh;
+    top: 35;
+    left: 0;
+    height: 70vh;
     width: 100%;
     background: rgba(0, 0, 0, 60%);
     display: flex;
@@ -76,14 +77,19 @@ a {
     align-items: center;
 }
 
-.overlay h1,
-h2 {
+.overlay h1 {
+    font-size: 3em;
+    color: white;
+}
+
+.overlay h2 {
+    font-size: 2.2em;
     color: white;
 }
 
 .overlay label {
     border: 2px solid white;
-    font-size: 1.5em;
+    font-size: 2em;
     color: white;
     padding: 5px 40px;
     margin-top: 50%;
@@ -123,8 +129,9 @@ h2 {
 }
 
 header {
+    margin: 0 auto;
     width: 100vw;
-    height: 60vh;
+    height: 70vh;
 }
 
 header img {
@@ -141,29 +148,26 @@ header img {
 }
 
 nav {
-    width: 100%;
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
+    font-size: 1.5em;
 }
 
 .nav {
     background: white;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .nav ul {
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
 .nav li {
+    padding: 1% 0;
     display: inline;
-    padding: 10px;
-    margin: 0 30px;
-    font-size: 1.3em;
 }
 
 .nav li:hover {
@@ -211,7 +215,7 @@ nav {
 
 .services p {
     text-align: center;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .services ul {
@@ -350,6 +354,9 @@ i.fas.fa-phone-alt {
 }
 
 @media screen and (max-width: 500px) {
+    .address {
+        font-size: .9em;
+    }
     header {
         height: 50vh;
     }
@@ -357,7 +364,7 @@ i.fas.fa-phone-alt {
         height: 50vh;
     }
     .overlay h1 {
-        margin: 20% 2% 0 2%;
+        margin: 10% 2% 0 2%;
         color: white;
         font-size: 1.4em;
     }
@@ -370,7 +377,7 @@ i.fas.fa-phone-alt {
         font-size: 1.5em;
         color: white;
         padding: 5px 40px;
-        margin-top: 30%;
+        margin-top: 35%;
         border-radius: 32px;
         display: inline-block;
         text-align: center;
@@ -390,17 +397,26 @@ i.fas.fa-phone-alt {
         z-index: 101;
         opacity: 90%;
         transition: ease-in-out 0.7s;
+        text-align: center;
     }
     .nav {
-        background: lightgray;
-        height: 100%;
+        background: lightgrey;
         width: 100%;
-        margin: 0;
-        padding: 0;
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .nav ul {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-content: center;
         justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .nav li {
+        display: block;
+        margin: 30% 0;
     }
     .move {
         transform: translateX(40vw);
@@ -422,14 +438,7 @@ i.fas.fa-phone-alt {
         position: absolute;
         top: 50px;
         left: 10px;
-        font-size: 1.5em;
-        color: black;
-    }
-    .nav li {
-        display: block;
         font-size: 1.3em;
-        border: none;
-        margin-top: 40px;
         color: black;
     }
     .paper {
