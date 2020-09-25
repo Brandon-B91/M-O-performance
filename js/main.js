@@ -23,13 +23,14 @@ function openModal() {
     let open = document.querySelector('#open');
     open.addEventListener('click', () => {
         let navMdl = document.querySelector('nav');
+        let x = document.querySelector('#close');
         navMdl.classList.add('move');
         open.classList.remove('rotate')
+        x.classList.remove('rotate')
         setTimeout(() => {
             open.style.display = 'none';
             x.classList.add('rotate')
         }, 100)
-        let x = document.querySelector('#close');
         x.style.display = 'block';
     });
 };
