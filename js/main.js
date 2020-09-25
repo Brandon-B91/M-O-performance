@@ -26,7 +26,6 @@ function openModal() {
         let x = document.querySelector('#close');
         navMdl.classList.add('move');
         open.classList.remove('rotate')
-        x.classList.remove('rotate')
         setTimeout(() => {
             open.style.display = 'none';
             x.classList.add('rotate')
@@ -43,11 +42,11 @@ function closeModal() {
         navMdl.classList.remove('move');
         setTimeout(() => {
             open.classList.add('rotate')
-            x.classList.remove('rotate');
             x.style.display = 'none';
         }, 100)
         let open = document.querySelector('#open');
         open.style.display = 'block';
+        x.classList.remove('rotate');
     });
 }
 closeModal();
