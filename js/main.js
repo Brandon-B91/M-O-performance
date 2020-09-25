@@ -12,35 +12,44 @@ imgs.forEach((img) => {
     })
 })
 
-
-modal.addEventListener('click', (e) => {
-    if (e.target == modal) {
-        modal.style.display = 'none'
-    }
-});
+function closeMdl() {
+    modal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    })
+};
+closeMdl();
 
 function openModal() {
-
     let open = document.querySelector('#open');
     open.addEventListener('click', () => {
         let navMdl = document.querySelector('nav');
         navMdl.classList.add('move');
-        open.style.display = "none";
-
-
+        open.classList.remove('rotate')
+        setTimeout(() => {
+            open.style.display = 'none';
+            x.classList.add('rotate')
+        }, 100)
+        let x = document.querySelector('#close');
+        x.style.display = 'block';
     });
+};
+openModal();
 
+function closeModal() {
     let x = document.querySelector('#close');
     x.addEventListener('click', () => {
         let navMdl = document.querySelector('nav');
         navMdl.classList.remove('move');
         setTimeout(() => {
-            open.style.display = 'block';
-        }, 600);
-        clearInterval();
+            open.classList.add('rotate')
+            x.classList.remove('rotate');
+            x.style.display = 'none';
+        }, 100)
+        let open = document.querySelector('#open');
+        open.style.display = 'block';
     });
-};
-openModal();
+}
+closeModal();
 
 function mapApp() {
     let maps = document.querySelector('.maps');
