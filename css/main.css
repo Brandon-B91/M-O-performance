@@ -227,13 +227,13 @@
                  .slider {
                      position: relative;
                      overflow: hidden;
-                     height: 400px;
+                     height: 600px;
                      width: 100%;
                      text-align: center;
                      display: flex;
                      align-items: center;
                      justify-items: center;
-                     margin: 1em 0;
+                     margin: .5em 0;
                  }
                  
                  .slides {
@@ -265,7 +265,7 @@
                      left: -100vw;
                      opacity: 0;
                      width: 90%;
-                     margin-left: 1em;
+                     margin-left: 2em;
                  }
                  
                  .slide.current .content {
@@ -484,15 +484,12 @@
                          transition: ease .7s;
                          transform: rotate(360deg);
                      }
-                     .paper {
-                         width: 80vw;
-                         margin-top: 20px;
-                     }
-                     .swiper-button-prev {
-                         display: none !important;
-                     }
-                     .swiper-button-next {
-                         display: none !important;
+                     .slide .content {
+                         position: absolute;
+                         left: -100vw;
+                         opacity: 0;
+                         width: 90%;
+                         margin-left: 1em;
                      }
                      .gallery-pics {
                          display: grid;

@@ -153,43 +153,44 @@ if (auto) {
     slideInterval = setInterval(nextSlide, intervalTime);
 }
 
+function moveSlide() {
+    var min_horizontal_move = 30;
+    var max_vertical_move = 30;
+    var within_ms = 1000;
 
-// let touchstartX = 0;
-// let touchstartY = 0;
-// let touchendX = 0;
-// let touchendY = 0;
+    var start_xPos;
+    var start_yPos;
+    var start_time;
 
-// const gestureZone = document.querySelector('.');
+    function touch_start(event) {
+        start_xPos = event.touches[0].pageX;
+        start_yPos = event.touches[0].pageY;
+        start_time = new Date();
+    }
 
-// gestureZone.addEventListener('touchstart', function(event) {
-//     touchstartX = event.changedTouches[0].screenX;
-//     touchstartY = event.changedTouches[0].screenY;
-// });
 
-// gestureZone.addEventListener('touchend', function(event) {
-//     touchendX = event.changedTouches[0].screenX;
-//     touchendY = event.changedTouches[0].screenY;
-//     handleGesture();
-// });
+    function touch_end(event) {
+        var end_xPos = event.changedTouches[0].pageX;
+        var end_yPos = event.changedTouches[0].pageY;
+        var end_time = new Date();
+        let move_x = end_xPos - start_xPos;
+        let move_y = end_yPos - start_yPos;
+        let elapsed_time = end_time - start_time;
+        if (Math.abs(move_x) > min_horizontal_move && Math.abs(move_y) < max_vertical_move && elapsed_time < within_ms) {
+            if (move_x < 0) {
+                nextSlide(slides + 1)
+                clearInterval(slideInterval)
+            } else {
+                prevSlide(slides - 1)
+                clearInterval(slideInterval)
+            }
+        }
+    }
 
-// function handleGesture() {
-//     if (touchendX <= touchstartX) {
-//         nextSlide(slides + 1);
-//     }
+    var content = document.querySelector('.slides');
+    content.addEventListener('touchstart', touch_start);
+    content.addEventListener('touchend', touch_end);
 
-//     if (touchendX >= touchstartX) {
-//         prevSlide(slides - 1)
-//     }
+};
 
-//     if (touchendY <= touchstartY) {
-
-//     }
-
-//     if (touchendY >= touchstartY) {
-
-//     }
-
-//     if (touchendY == touchstartY) {
-
-//     }
-// };
+moveSlide();
