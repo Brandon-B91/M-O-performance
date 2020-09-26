@@ -129,6 +129,7 @@ const prevSlide = () => {
     setTimeout(() => current.classList.remove('current'));
 };
 
+
 // Button events
 next.addEventListener('click', e => {
     nextSlide();
@@ -153,42 +154,42 @@ if (auto) {
 }
 
 
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
+// let touchstartX = 0;
+// let touchstartY = 0;
+// let touchendX = 0;
+// let touchendY = 0;
 
-const gestureZone = document.querySelector('.slider');
+// const gestureZone = document.querySelector('.');
 
-gestureZone.addEventListener('touchstart', function(event) {
-    touchstartX = event.changedTouches[0].screenX;
-    touchstartY = event.changedTouches[0].screenY;
-}, false);
+// gestureZone.addEventListener('touchstart', function(event) {
+//     touchstartX = event.changedTouches[0].screenX;
+//     touchstartY = event.changedTouches[0].screenY;
+// });
 
-gestureZone.addEventListener('touchend', function(event) {
-    touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
-    handleGesture();
-}, false);
+// gestureZone.addEventListener('touchend', function(event) {
+//     touchendX = event.changedTouches[0].screenX;
+//     touchendY = event.changedTouches[0].screenY;
+//     handleGesture();
+// });
 
-function handleGesture() {
-    if (touchendX <= touchstartX) {
-        nextSlide(slides + 1);
-    }
+// function handleGesture() {
+//     if (touchendX <= touchstartX) {
+//         nextSlide(slides + 1);
+//     }
 
-    if (touchendX >= touchstartX) {
-        prevSlide(slides - 1)
-    }
+//     if (touchendX >= touchstartX) {
+//         prevSlide(slides - 1)
+//     }
 
-    // if (touchendY <= touchstartY) {
+//     if (touchendY <= touchstartY) {
 
-    // }
+//     }
 
-    // if (touchendY >= touchstartY) {
+//     if (touchendY >= touchstartY) {
 
-    // }
+//     }
 
-    // if (touchendY == touchstartY) {
+//     if (touchendY == touchstartY) {
 
-    // }
-};
+//     }
+// };
