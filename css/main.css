@@ -227,13 +227,13 @@
                  .slider {
                      position: relative;
                      overflow: hidden;
-                     height: 600px;
+                     height: 400px;
                      width: 100%;
                      text-align: center;
                      display: flex;
                      align-items: center;
                      justify-items: center;
-                     margin: .5em 0;
+                     margin: 0 0;
                  }
                  
                  .slides {

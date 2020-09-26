@@ -180,9 +180,11 @@ function moveSlide() {
             if (move_x < 0) {
                 nextSlide(slides + 1)
                 clearInterval(slideInterval)
+                slideInterval = setInterval(nextSlide, intervalTime);
             } else {
                 prevSlide(slides - 1)
                 clearInterval(slideInterval)
+                slideInterval = setInterval(nextSlide, intervalTime);
             }
         }
     }
