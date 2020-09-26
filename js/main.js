@@ -153,39 +153,42 @@ if (auto) {
 }
 
 
-var touchstartX = 0;
-var touchstartY = 0;
-var touchendX = 0;
-var touchendY = 0;
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
 
-var gesuredZone = document.querySelector('.slider');
+const gestureZone = document.querySelector('.slider');
 
-gesuredZone.addEventListener('touchstart', function(event) {
-    touchstartX = event.screenX;
-    touchstartY = event.screenY;
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
 }, false);
 
-gesuredZone.addEventListener('touchend', function(event) {
-    touchendX = event.screenX;
-    touchendY = event.screenY;
-    handleGesure();
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
 }, false);
 
-function handleGesure() {
-    var swiped = 'swiped: ';
-    if (touchendX < touchstartX) {
-        nextSlide;
+function handleGesture() {
+    if (touchendX <= touchstartX) {
+        nextSlide(slides + 1);
     }
-    if (touchendX > touchstartX) {
-        alert(swiped + 'right!');
+
+    if (touchendX >= touchstartX) {
+        prevSlide(slides - 1)
     }
-    if (touchendY < touchstartY) {
-        alert(swiped + 'down!');
-    }
-    if (touchendY > touchstartY) {
-        alert(swiped + 'left!');
-    }
-    // if (touchendY == touchstartY) {
-    //     alert('tap!');
+
+    // if (touchendY <= touchstartY) {
+
     // }
-}
+
+    // if (touchendY >= touchstartY) {
+
+    // }
+
+    // if (touchendY == touchstartY) {
+
+    // }
+};
