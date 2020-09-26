@@ -40,12 +40,12 @@ function closeModal() {
     x.addEventListener('click', () => {
         let navMdl = document.querySelector('nav');
         navMdl.classList.remove('move');
+        let open = document.querySelector('#open');
+        open.style.display = 'block';
         setTimeout(() => {
             open.classList.add('rotate')
             x.style.display = 'none';
         }, 200)
-        let open = document.querySelector('#open');
-        open.style.display = 'block';
         x.classList.remove('rotate');
     });
 }
@@ -89,3 +89,103 @@ function screenWidth() {
     })
 }
 screenWidth();
+
+const slides = document.querySelectorAll('.slide');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
+const auto = true; // Auto scroll
+const intervalTime = 5000;
+let slideInterval;
+
+const nextSlide = () => {
+    // Get current class
+    const current = document.querySelector('.current');
+    // Remove current class
+    current.classList.remove('current');
+    // Check for next slide
+    if (current.nextElementSibling) {
+        // Add current to next sibling
+        current.nextElementSibling.classList.add('current');
+    } else {
+        // Add current to start
+        slides[0].classList.add('current');
+    }
+    setTimeout(() => current.classList.remove('current'));
+};
+
+const prevSlide = () => {
+    // Get current class
+    const current = document.querySelector('.current');
+    // Remove current class
+    current.classList.remove('current');
+    // Check for prev slide
+    if (current.previousElementSibling) {
+        // Add current to prev sibling
+        current.previousElementSibling.classList.add('current');
+    } else {
+        // Add current to last
+        slides[slides.length - 1].classList.add('current');
+    }
+    setTimeout(() => current.classList.remove('current'));
+};
+
+// Button events
+next.addEventListener('click', e => {
+    nextSlide();
+    if (auto) {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, intervalTime);
+    }
+});
+
+prev.addEventListener('click', e => {
+    prevSlide();
+    if (auto) {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, intervalTime);
+    }
+});
+
+// Auto slide
+if (auto) {
+    // Run next slide at interval time
+    slideInterval = setInterval(nextSlide, intervalTime);
+}
+
+
+var touchstartX = 0;
+var touchstartY = 0;
+var touchendX = 0;
+var touchendY = 0;
+
+var gesuredZone = document.querySelector('.slider');
+
+gesuredZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.screenX;
+    touchstartY = event.screenY;
+}, false);
+
+gesuredZone.addEventListener('touchend', function(event) {
+    touchendX = event.screenX;
+    touchendY = event.screenY;
+    handleGesure();
+}, false);
+
+function handleGesure() {
+    var swiped = 'swiped: ';
+    if (touchendX < touchstartX) {
+        nextSlide;
+    }
+    if (touchendX > touchstartX) {
+        alert(swiped + 'right!');
+    }
+    if (touchendY < touchstartY) {
+        alert(swiped + 'down!');
+    }
+    if (touchendY > touchstartY) {
+        alert(swiped + 'left!');
+    }
+    if (touchendY == touchstartY) {
+        alert('tap!');
+    }
+}
