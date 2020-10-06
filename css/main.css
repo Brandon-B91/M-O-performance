@@ -93,8 +93,9 @@
                      font-size: 2.2em;
                      color: white;
                  }
-                 
-                 .overlay label {
+                 /* .overlay label {
+                     position: relative;
+                     top: 50%;
                      border: 2px solid white;
                      font-size: 2em;
                      color: white;
@@ -108,6 +109,19 @@
                  .overlay label:hover {
                      cursor: pointer;
                      background: rgba(215, 215, 215);
+                 } */
+                 
+                 a.call-us-numbers {
+                     margin-top: 20%;
+                     color: white;
+                     border: 1px solid white;
+                     padding: 5px 40px;
+                     font-size: 1.5em;
+                     border-radius: 32px;
+                 }
+                 
+                 a.call-us-numbes:hover {
+                     cursor: pointer;
                  }
                  
                  .numbers {
@@ -227,13 +241,13 @@
                  .slider {
                      position: relative;
                      overflow: hidden;
-                     height: 400px;
+                     height: 500px;
                      width: 100%;
                      text-align: center;
                      display: flex;
                      align-items: center;
                      justify-items: center;
-                     margin: 0 0;
+                     margin: 0;
                  }
                  
                  .slides {
@@ -250,6 +264,7 @@
                      display: flex;
                      align-items: center;
                      justify-items: center;
+                     margin: 0;
                  }
                  
                  .slide p {
@@ -398,10 +413,10 @@
                          font-size: .9em;
                      }
                      header {
-                         height: 50vh;
+                         height: 60vh;
                      }
                      .overlay {
-                         height: 50vh;
+                         height: 60vh;
                      }
                      .overlay h1 {
                          margin: 10% 2% 0 2%;
@@ -417,7 +432,6 @@
                          font-size: 1.5em;
                          color: white;
                          padding: 5px 40px;
-                         margin-top: 35%;
                          border-radius: 32px;
                          display: inline-block;
                          text-align: center;
