@@ -7,6 +7,7 @@
     <meta charset="utf-8" lang="en" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,18 +66,18 @@
                 We offer all services from changing oil and brakes to specialty services like transmission work, wiring and eletrical diagnostics.
             </p>
             <div class="services-wrapper">
-                <img src="img/transmission.png" alt="">
-                <p>We specialize in transmission repair and diagnostics as well as rebuilding.</p>
-                <p>Oil changes and filters of course!</p>
-                <img src="img/oil.png" alt="">
-                <img src="img/electrical.png" alt="">
-                <p>Electrical servicing and diagnostics.</p>
-                <p>Something just not running right? Not sure what it is? Bring it to us and we can figure it out!</p>
-                <img src="img/diagnosis.png" alt="">
-                <img src="img/performance.png" alt="">
-                <p>How fast do you want to go? We will help you get there using the best parts and making sure it's done safely and reliably.</p>
-                <p>Need a tune-up, or just a brake job? maybe something you don't see listed here. We can handle it all.</p>
-                <img src="img/general.png" alt="">
+                <img src="img/transmission.png" data-aos="fade-right" alt="">
+                <p data-aos="fade-left">We specialize in transmission repair and diagnostics as well as rebuilding.</p>
+                <p data-aos="fade-right">Oil changes and filters of course!</p>
+                <img src="img/oil.png" data-aos="fade-left" alt="">
+                <img src="img/electrical.png" data-aos="fade-right" alt="">
+                <p data-aos="fade-left">Electrical servicing and diagnostics.</p>
+                <p data-aos="fade-right">Something just not running right? Not sure what it is? Bring it to us and we can figure it out!</p>
+                <img src="img/diagnosis.png" data-aos="fade-left" alt="">
+                <img src="img/performance.png" data-aos="fade-right" alt="">
+                <p data-aos="fade-left">How fast do you want to go? We will help you get there using the best parts and making sure it's done safely and reliably.</p>
+                <p data-aos="fade-right">Need a tune-up, or just a brake job? maybe something you don't see listed here. We can handle it all.</p>
+                <img src="img/general.png" data-aos="fade-left" alt="">
             </div>
             <a id="why-us"></a>
 
@@ -126,27 +127,27 @@
                 <div class="gallery-pics">
                     <picture>
                         <source media="(max-width: 600px)" srcset="img/black-truck-sm.jpeg">
-                        <img src="img/black-truck.jpeg" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
+                        <img src="img/black-truck.jpeg" data-aos="fade-up" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
                     </picture>
                     <picture>
                         <source media="(max-width: 600px)" srcset="img/engine-sm.jpeg">
-                        <img src="img/engine.jpeg" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
+                        <img src="img/engine.jpeg" data-aos="fade-up" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
                     </picture>
                     <picture>
                         <source media="(max-width: 600px)" srcset="img/engine2-sm.jpeg">
-                        <img src="img/engine2.jpeg" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
+                        <img src="img/engine2.jpeg" data-aos="fade-up" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
                     </picture>
                     <picture>
                         <source media="(max-width: 600px)" srcset="img/intercooler-sm.jpeg">
-                        <img src="img/intercooler.jpeg" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
+                        <img src="img/intercooler.jpeg" data-aos="fade-up" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
                     </picture>
                     <picture>
                         <source media="(max-width: 600px)" srcset="img/mustang-sm.jpeg">
-                        <img src="img/mustang.jpeg" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
+                        <img src="img/mustang.jpeg" data-aos="fade-up" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
                     </picture>
                     <picture>
                         <source media="(max-width: 600px)" srcset="img/red-truck-sm.jpeg">
-                        <img src="img/red-truck.jpeg" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
+                        <img src="img/red-truck.jpeg" data-aos="fade-up" loading="lazy" alt="Modified dodge lightning - bigger turbo and inter cooler" class="img" width="1024" height="1024">
                     </picture>
                 </div>
             </div>
@@ -172,7 +173,11 @@
                 </ul>
             </div>
         </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="js/main.js "></script>
+        <script>
+            AOS.init();
+        </script>
 </body>
 
 </html>
