@@ -171,7 +171,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .nav li {
@@ -416,11 +416,12 @@ i.fas.fa-phone-alt {
         display: flex;
         flex-direction: column;
         align-content: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
     }
     .nav li {
         display: block;
-        margin: 4% 0;
+        margin: 1.5em 0;
     }
     .move {
         transform: translateX(40vw);
@@ -463,7 +464,7 @@ i.fas.fa-phone-alt {
     .overlay h1 {
         margin: 5% 2% 0 2%;
         color: white;
-        font-size: 1.4em;
+        font-size: 1.4em
     }
     .overlay h2 {
         color: white;
@@ -507,12 +508,11 @@ i.fas.fa-phone-alt {
         display: flex;
         flex-direction: column;
         align-content: center;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-wrap: nowrap;
     }
     .nav li {
         display: block;
-        margin: 30% 0;
     }
     .move {
         transform: translateX(40vw);
