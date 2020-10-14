@@ -322,7 +322,8 @@ nav {
     grid-template-rows: 300px;
     grid-gap: 10px;
     object-fit: cover;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    overflow: none;
 }
 
 .gallery-pics img {
