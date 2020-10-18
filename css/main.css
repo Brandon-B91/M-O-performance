@@ -320,16 +320,15 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: 300px;
-    grid-gap: 10px;
-    object-fit: cover;
+    grid-gap: 5px;
     padding-bottom: 10px;
-    overflow: none;
 }
 
 .gallery-pics img {
     height: 100%;
     width: 100%;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .contact-us {
@@ -395,6 +394,7 @@ i.fas.fa-phone-alt {
     }
     .overlay h1 {
         margin-top: 1em;
+        text-align: center;
     }
     nav {
         display: block;
@@ -419,6 +419,7 @@ i.fas.fa-phone-alt {
         align-content: center;
         justify-content: space-evenly;
         flex-wrap: nowrap;
+        height: 100%;
     }
     .nav li {
         display: block;
@@ -431,7 +432,7 @@ i.fas.fa-phone-alt {
     #open {
         display: block;
         position: fixed;
-        top: 50px;
+        top: 10px;
         left: 10px;
         font-size: 1.5em;
         color: black;
@@ -440,7 +441,7 @@ i.fas.fa-phone-alt {
     #close {
         display: none;
         position: fixed;
-        top: 50px;
+        top: 10px;
         left: 10px;
         font-size: 2em;
         color: black;
@@ -449,6 +450,10 @@ i.fas.fa-phone-alt {
     .rotate {
         transition: ease .7s;
         transform: rotate(360deg);
+    }
+    .gallery-pics img {
+        height: 95%;
+        width: 100%;
     }
 }
 
@@ -522,7 +527,7 @@ i.fas.fa-phone-alt {
     #open {
         display: block;
         position: fixed;
-        top: 50px;
+        top: 5px;
         left: 10px;
         font-size: 1.5em;
         color: black;
@@ -531,7 +536,7 @@ i.fas.fa-phone-alt {
     #close {
         display: none;
         position: fixed;
-        top: 50px;
+        top: 5px;
         left: 10px;
         font-size: 2em;
         color: black;
@@ -553,8 +558,11 @@ i.fas.fa-phone-alt {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 30vh);
         grid-gap: 10px;
-        object-fit: cover;
         padding-bottom: 10px
+    }
+    .gallery-pics img {
+        height: 95%;
+        width: 100%;
     }
     .contact-icons {
         display: grid;
