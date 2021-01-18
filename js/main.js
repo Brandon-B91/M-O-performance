@@ -76,7 +76,7 @@ function openFB() {
 openFB();
 
 function screenWidth() {
-    let callUs = document.querySelector('label');
+    let callUs = document.querySelector('.call-us-numbers');
     let width = window.screen.width;
     callUs.addEventListener('click', () => {
         let contact = document.querySelector('.numbers');
