@@ -50,6 +50,17 @@ a {
     color: white;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.modal-close {
+    position: fixed;
+    font-size: 2em;
+    color: black;
+}
+
+.modal-close:hover {
+    cursor: pointer;
 }
 
 .modalImg {
@@ -170,7 +181,6 @@ nav {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-    /* width: 100%; */
 }
 
 .nav li {
@@ -216,7 +226,6 @@ nav {
     align-self: center;
     margin: 0 auto;
     margin-top: 10px;
-    /* margin-bottom: 10px; */
 }
 
 .services-wrapper p {
@@ -493,13 +502,7 @@ i.fas.fa-phone-alt {
         transition: ease .7s;
         transform: rotate(360deg);
     }
-    .slide .content {
-        position: absolute;
-        left: -100vw;
-        opacity: 0;
-        width: 90%;
-        margin-left: 1em;
-    }
+  
     .gallery-pics {
         display: grid;
         grid-template-columns: 1fr;

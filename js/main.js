@@ -75,20 +75,20 @@ function openFB() {
 }
 openFB();
 
-// function screenWidth() {
-//     let callUs = document.querySelector('label');
-//     let width = window.screen.width;
-//     callUs.addEventListener('click', () => {
-//         let contact = document.querySelector('.numbers');
-//         if (width > 600) {
-//             contact.classList.add('show-numbers');
-//         }
-//         setInterval(function() {
-//             contact.classList.remove('show-numbers')
-//         }, 10000);
-//     })
-// }
-// screenWidth();
+function screenWidth() {
+    let callUs = document.querySelector('label');
+    let width = window.screen.width;
+    callUs.addEventListener('click', () => {
+        let contact = document.querySelector('.numbers');
+        if (width > 600) {
+            contact.classList.add('show-numbers');
+        }
+        setInterval(function() {
+            contact.classList.remove('show-numbers')
+        }, 10000);
+    })
+}
+screenWidth();
 
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
@@ -196,3 +196,4 @@ function moveSlide() {
 };
 
 moveSlide();
+
