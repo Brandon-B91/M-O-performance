@@ -234,91 +234,31 @@ nav {
     transform: translateX(100px);
 }
 
- .slider {
-    position: relative;
-    overflow: hidden;
-    height: 450px;
-    width: 100%;
+.why-section {
+    margin-top: 50px;
+    padding: 50px 0;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    margin-bottom: 50px;
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.slides {
-    height: 100%;
-    width: 100%;
+.why-section h2, .why-section p {
+    color: white;
+    padding: 0 10px;
 }
 
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    margin: 0;
+.why-section p {
+    margin-bottom: 2em;
+    color: white;
+    padding: 0 10px;
 }
-
-.slide p {
-    padding: 0 30px;
-}
-
-.slide.current {
-    opacity: 1;
-}
-
-.slide .content {
-    position: absolute;
-    left: -100vw;
-    opacity: 0;
-    width: 90%;
-    margin-left: 2em;
-}
-
-.slide.current .content {
-    opacity: 1;
-    transform: translateX(100vw);
-    transition: all 0.7s ease-in-out 0.3s;
-}
-
-.buttons button#next {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    transform: translateY(-50%);
-}
-
-.buttons button#prev {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    transform: translateY(-50%);
-}
-
-.buttons button {
-    border: 2px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    padding: 13px 15px;
-    border-radius: 50%;
-    font-size: .8em;
-    border: 1px solid black;
-}
-
-.buttons button:hover {
-    background-color: #fff;
-    color: #333;
-} */
 
 .gallery-pics {
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     grid-template-rows: 300px;
     grid-gap: 5px;
     max-width: 700px;
@@ -334,7 +274,6 @@ picture {
     width: 100%;
     cursor: pointer;
     object-fit: cover;
-    overflow: hidden;
     transform: translateY(-100px);
     opacity: 0;
 }
@@ -460,7 +399,7 @@ i.fas.fa-phone-alt {
         transform: rotate(360deg);
     }
     .gallery-pics img {
-        height: 95%;
+        height: 100%;
         width: 100%;
     }
 }
@@ -470,10 +409,10 @@ i.fas.fa-phone-alt {
         font-size: .9em;
     }
     header {
-        height: 60vh;
+        height: 70vh;
     }
     .overlay {
-        height: 60vh;
+        height: 70vh;
     }
     .overlay h1 {
         margin: 5% 2% 0 2%;
