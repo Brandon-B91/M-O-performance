@@ -245,7 +245,7 @@ nav {
 
 .why-section {
     margin-top: 50px;
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
     background: black;
     color: white;
@@ -273,10 +273,6 @@ nav {
     max-width: 700px;
 }
 
-picture {
-    margin: 0;
-    padding: 0;
-}
 
 .gallery img {
     height: 100%;
