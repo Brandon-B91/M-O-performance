@@ -53,40 +53,4 @@ gsap.utils.toArray(".left").forEach(box => {
   });
 
 
-// ScrollTrigger.batch(".left", {
-//   onEnter: batch => 
-//   gsap.to(batch, 
-//     {
-//         x:0, 
-//         opacity:1, 
-//         stagger: {each: 2, 
-//             overwrite: true,
-//             duration: 1
-//         },
-//     })    
-// })
-
-
-// ScrollTrigger.batch(".right", {
-//     onEnter: batch => 
-//     gsap.to(batch, 
-//       {
-//           x:0, 
-//           opacity:1, 
-//           stagger: {each: 1, 
-//             overwrite: true},
-//         })
-// })
-
-// ScrollTrigger.batch(".gallery-img", {
-//     onEnter: batch => 
-//     gsap.to(batch, 
-//       {
-//           y:0, 
-//           opacity:1, 
-//           stagger: {each: 1, 
-//             overwrite: true}
-//         })
-//   })
-
 
